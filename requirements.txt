@@ -16,6 +16,7 @@ charset-normalizer==2.0.6
 click==8.0.3
 colorama==0.4.4
 cryptography==3.4.8
+cython==0.29.24
 dbus-python==1.2.18
 distlib==0.3.8
 distro==1.7.0
@@ -36,7 +37,7 @@ httpcore==1.0.2
 httplib2==0.20.2
 httptools==0.2.0
 httpx==0.26.0
-idna==2.6
+idna==2.10
 importlib-metadata==4.6.4
 itsdangerous==2.1.2
 jeepney==0.7.1
