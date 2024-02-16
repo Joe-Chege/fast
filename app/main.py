@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from random import randrange
@@ -9,6 +10,8 @@ from app.database import engine, get_db
 from . import models
 from . import schemas
 from . import utils
+from . import oauth2
+from app.config import settings
 from  app.routers import post, user, auth
 
 
@@ -17,7 +20,7 @@ from  app.routers import post, user, auth
 
 
 
-models.Base.metadata.create_all(bind=engine)
+#models.Base.metadata.create_all(bind=engine)
 
 while True:
     try:
@@ -38,6 +41,16 @@ while True:
 
 
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    )
 
 my_posts = [
     {"title": "Building Scalable Systems", "content": "Architecting for growth and performance", "published": True,

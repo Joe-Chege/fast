@@ -9,6 +9,7 @@ class PostBase(BaseModel):
     title: str
     content: str
     published: bool = True
+    feeds: Optional[str] = None
 
 class PostCreate(PostBase):
     pass
