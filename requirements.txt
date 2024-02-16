@@ -22,7 +22,6 @@ distlib==0.3.8
 distro==1.7.0
 dnspython==2.5.0
 ecdsa==0.18.0
-email-validator==2.1.0.post1
 exceptiongroup==1.2.0
 fastapi==0.109.0
 fasteners==0.14.1
@@ -93,7 +92,6 @@ python-multipart==0.0.6
 pytz==2022.1
 pyxdg==0.27
 reportlab==3.6.8
-requests==2.18.4
 rsa==4.9
 SecretStorage==3.3.1
 setuptools>=58.0.4
